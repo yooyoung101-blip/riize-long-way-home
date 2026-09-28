@@ -4,6 +4,8 @@
 
 > 너에게 닿아, 나로 돌아오다.
 
+**[웹 포트폴리오 열기](https://yooyoung101-blip.github.io/riize-long-way-home/)**
+
 - **HOME**: 나를 설명할 필요가 없는 관계.
 - **LONG WAY**: 타인의 기대를 지나 나다운 모습을 알아가는 시간.
 - **WINTER**: 작은 배려와 체온이 선명해지는 계절적 감각.
@@ -19,30 +21,32 @@
 | `SOURCES.md` | 리서치·이미지 출처, 권리 확인 범위, 기획 가정 |
 | `README.md` | 프로젝트 및 배포 안내 |
 
-별도 설치나 빌드 명령 없이 배포할 수 있습니다. 편집용 분리 원본은 보관된 `RIIZE_LONG_WAY_HOME_GitHub.zip`의 `source/`에 있습니다. 원본을 재빌드할 때는 사진·스타일·스크립트를 포함한 단일 HTML을 배포 파일로 사용합니다.
+별도 설치나 빌드 명령 없이 배포할 수 있습니다. 최신 원본은 이 저장소의 `index.html`입니다. CSS·JavaScript·사진을 파일 안에 포함합니다. 과거 보관 ZIP은 초기 버전이므로 현재 파일보다 우선하지 않습니다. 편집 전 최신 커밋과 파일 SHA를 확인합니다.
 
-## GitHub Pages 설정
+## 게시 상태
 
-이 저장소의 `main` 브랜치에 `index.html`이 이미 업로드되어 있습니다.
+GitHub Pages의 `main / (root)`에서 배포합니다. 2026-09-24 최초 배포 성공과 공개 URL을 확인했습니다. 이후 변경은 같은 브랜치에서 자동 배포하며 Actions의 `pages build and deployment` 결과를 확인합니다.
 
-1. 이 저장소의 **Settings → Pages**를 엽니다.
-2. **Build and deployment → Source**에서 **Deploy from a branch**를 선택합니다.
-3. **Branch: main**, **Folder: / (root)**를 선택하고 **Save**를 누릅니다.
-4. **Actions**에서 Pages 배포 실행의 성공 여부를 확인합니다.
-5. Pages 설정 화면에 표시되는 게시 주소를 열어 실제 콘텐츠와 기능을 확인합니다.
+## 빠르게 읽는 순서
 
-공식 절차: [GitHub Pages 게시 소스 설정](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+1. [핵심 판단 한눈에](https://yooyoung101-blip.github.io/riize-long-way-home/#overview): 타이틀·트랙 구성·실행 계획.
+2. [타이틀 선정 근거](https://yooyoung101-blip.github.io/riize-long-way-home/#decision): 후보 브리프 비교와 승인 기준.
+3. [기여 범위](https://yooyoung101-blip.github.io/riize-long-way-home/#ownership): 직접 수행한 기획·웹 구성 범위.
 
 ## 주요 기능
 
 - 5개 트랙 선택: 사운드·보컬·데모 심사 기준 전환. 제안곡 오디오 재생 기능은 없습니다.
-- 목차 및 모바일 메뉴, 읽기 진행률.
+- 전 구간에서 열 수 있는 전체 목차. Escape로 닫은 뒤 버튼에 포커스가 돌아옵니다.
+- 세 가지 핵심 판단 요약과 상세 바로가기, 읽기 진행률.
+- 비교표·일정표·예산표 가로 스크롤 및 키보드 접근, 작은 화면의 스크롤 안내.
 - 초도 수량 5,000~30,000장 시뮬레이션: 고정비 180,000,000원 + 수량 × 6,000원 + 소계의 10% 예비비.
 - 기존 곡 영상 및 리서치 출처 링크.
 
 ## 검증 상태
 
-2026-09-23 기준, 기존 정적·모의 DOM 검사에서 목차·JavaScript 초기화·트랙 전환·키보드 이동·모바일 메뉴 로직·예산 산식 등을 확인했습니다. **실제 게시 페이지의 데스크톱·모바일 렌더링과 인터랙션 검수는 아직 미완료입니다.**
+공개 페이지의 데스크톱 이미지·트랙 전환·키보드 이동·목차·제작 캘린더·예산 계산·읽기 진행 표시를 확인했습니다. 정적·모의 DOM 검사에서 내부 링크·중복 ID·JavaScript 초기화·6개 수량의 예산 산식도 확인했습니다.
+
+모바일 700px/380px 반응형 CSS와 메뉴 로직은 검증했습니다. 현재 검수 브라우저는 모바일 뷰포트 전환을 지원하지 않아 실제 390px/360px 기기의 렌더링·터치 검수는 남아 있습니다. 외부 출처 링크 전체의 도착 페이지를 전수 확인한 것은 아닙니다.
 
 인쇄 시 선택된 트랙 상세만 출력될 수 있으므로 웹 열람을 기준으로 구성했습니다.
 
