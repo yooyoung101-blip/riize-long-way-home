@@ -18,23 +18,22 @@
 
 외부 플랫폼의 재생·지역 제한 및 링크 변경은 별도 확인이 필요합니다. 제안 곡의 데모로 사용하지 않습니다.
 
-## 사진 크레딧
+## 사진 크레딧 / 2026-09-29 화면 개편
 
-### 첫 화면 / assets/hero.jpg
+기존 Love 119 활동 사진을 겨울 감각과 관계의 거리감을 위한 레퍼런스로 인용합니다. 신규 앨범 촬영물·MV 완성본이 아닙니다. 원본 파일을 보관하고 화면에서 CSS 크롭·색감·타이포그래피 오버레이를 적용했습니다. 인물 이미지 생성·합성은 하지 않았습니다.
 
-- 출처: [RIIZE 공식 Weverse — ‘Ⅱ’ Trailer Photo : Rise (2) Realize](https://weverse.io/riize/media/0-175429318)
-- RIIZE / SM Entertainment 공식 프로모션 이미지, 2026년 활동 레퍼런스.
-- 1414×1768px. 원 사진가 이름과 공개 재사용 라이선스는 확인되지 않음.
-- 도시의 블루·앰버 및 그룹 구도 분석 목적으로 사용. 이 기획의 신규 재킷 사진이 아님.
+| 로컬 파일 | 확인한 출처 | 사용 |
+|---|---|---|
+| `assets/winter-group.jpg` | [SM 제공 / 스포츠경향](https://sports.khan.co.kr/article/202401221538013) | 첫 화면·포토북 디지털 시안 |
+| `assets/snow-rest.jpg` | [Love 119 티저 / Soompi](https://www.soompi.com/article/1634508wpp/watch-riize-gears-up-for-new-single-love-119-with-mv-teaser) | 관계 이미지·엔딩 트랙·MV 레퍼런스·기록 카드 |
+| `assets/group-genie.jpg` | [지니뮤직 매거진 / Love 119](https://www.genie.co.kr/magazine/subMain?ctid=1&mgz_seq=13916) | 도시 그룹 사진·트랙·캠페인 시안 |
+| `assets/shotaro.jpg`, `eunseok.jpg`, `sungchan.jpg`, `wonbin.jpg`, `sohee.jpg`, `anton.jpg` | 같은 지니뮤직 매거진의 멤버명 표기 순서 | 보컬 배치 가설·감정·구도 레퍼런스 |
 
-### 겨울 비주얼 / assets/winter.jpg
+사진: SM Entertainment 기존 프로모션 이미지. 원 사진가 이름·이용 조건은 별도로 확인하지 못했습니다. 사용자가 최종 사진 선정·출처 표기를 검토할 예정입니다.
 
-- 출처: [RIIZE — Love 119 concept photos / kpopping archive](https://kpopping.com/kpics/RIIZE-Love-119-concept-photos)
-- 2560×1707px. Love 119의 2024년 활동 이미지. 아카이브 게시 시점과 실제 활동 시기는 구분함.
-- kpopping은 호스팅 아카이브이며 권리자로 확인된 주체가 아님. 원 사진가·라이선스 미확인.
-- 계절감·그룹 거리감 분석을 위한 레퍼런스. 상업·광고·공개 재배포 이용 범위는 별도 확인 필요.
+### 웹폰트
 
-사진은 변형 생성하거나 인물의 정체성을 바꾸지 않았습니다. 화면에서 크롭·오버레이가 적용됩니다. 출처 표기가 이용 허락을 대신하지는 않습니다.
+Anton — Vernon Adams. [Google Fonts 소스](https://github.com/google/fonts/tree/main/ofl/anton), SIL Open Font License 1.1. Latin 범위를 WOFF로 서브셋해 자체 호스팅합니다. 라이선스: `assets/Anton-OFL.txt`.
 
 ## 창작 제안 / 가정
 
