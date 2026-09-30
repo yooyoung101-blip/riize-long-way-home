@@ -1,13 +1,13 @@
 # 자료 출처와 기획 가정
 
-리서치 기준일: 2026-09-22. 이 문서는 RIIZE의 미공개 겨울 발매 계획을 의미하지 않습니다.
+리서치 기준일: 2026-09-22. 핵심 발매 정보 재확인: 2026-09-30 (아래 1–5번 출처). 이 문서는 RIIZE의 미공개 겨울 발매 계획을 의미하지 않습니다.
 
 ## 사실 확인
 
 1. [RCA / SM — Love 119 공식 보도자료](https://cdn-p.smehost.net/sites/8e1f40b762984a27a20f577d99b7ac97/wp-content/uploads/2024/01/RIIZE.LOVE-119-.pdf): 2024-01-05, 피아노·보컬·첫사랑의 음악 설명과 쇼타로·원빈의 후렴 안무 참여.
 2. [Melon — Hug 앨범 소개·크레딧](https://www.melon.com/album/detail.htm?albumId=11686740): 2025-01-08, 동방신기 곡 리메이크, 아카펠라 도입부, 뉴트로 무드, 박문치 편곡.
 3. [RIIZE JAPAN OFFICIAL — Ⅱ](https://riizeofficial.jp/discography/ii/): 2026-06-15 발매, 6곡 목록.
-4. [Apple Music — Ⅱ 에디토리얼](https://music.apple.com/us/album/the-2nd-mini-album-ep/6774352871): 힙합·808·그루브 확장에 관한 플랫폼의 음악 해설. 기획자의 청취 조사 결과와 구분함.
+4. [Apple Music — Ⅱ 에디토리얼](https://music.apple.com/us/album/the-2nd-mini-album-ep/6774352871): 앨범의 힙합 확장과 타이틀의 왜곡된 808 베이스라인에 관한 플랫폼의 음악 해설. 기획자의 청취 조사 결과와 구분함.
 5. [RIIZE JAPAN OFFICIAL — Sunburst](https://riizeofficial.jp/discography/sunburst_normal/): 2026-08-26 일본 싱글과 수록곡 정보. 국내 겨울 EP의 발매 가능 여부를 보증하는 자료가 아님.
 
 ## 기존 곡 링크
