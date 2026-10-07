@@ -32,6 +32,7 @@ class Element {
 const elements = new Map(ids.map(id=>[id,new Element(id)]));
 const tabs = Array.from({length:5},(_,i)=>elements.get('track-tab-'+i));
 const sceneButtons=Array.from({length:5},()=>new Element());
+const studyButtons=Array.from({length:5},()=>new Element());
 const packageButton=new Element();
 packageButton.setAttribute('aria-expanded','false');
 const dots = Array.from({length:5},()=>new Element());
@@ -44,7 +45,7 @@ elements.get('units').value='10000';
 const progress=new Element();
 const documentListeners={};
 const windowListeners={};
-const document={getElementById:id=>{assert(elements.has(id),'missing DOM element '+id);return elements.get(id);},querySelector:sel=>{if(sel==='.package-toggle')return packageButton;if(sel==='.menu-toggle')return menuButton;if(sel==='.reading-progress span')return progress;throw new Error('Unexpected selector '+sel);},querySelectorAll:sel=>{if(sel==='[data-scene]')return sceneButtons;if(sel==='.track-tab')return tabs;if(sel==='.track-diagram span')return dots;return [];},addEventListener:(k,f)=>documentListeners[k]=f,documentElement:{scrollHeight:10000,classList:{add(){}}}};
+const document={getElementById:id=>{assert(elements.has(id),'missing DOM element '+id);return elements.get(id);},querySelector:sel=>{if(sel==='.package-toggle')return packageButton;if(sel==='.menu-toggle')return menuButton;if(sel==='.reading-progress span')return progress;throw new Error('Unexpected selector '+sel);},querySelectorAll:sel=>{if(sel==='[data-scene]')return sceneButtons;if(sel==='[data-study-stage]')return studyButtons;if(sel==='.track-tab')return tabs;if(sel==='.track-diagram span')return dots;return [];},addEventListener:(k,f)=>documentListeners[k]=f,documentElement:{scrollHeight:10000,classList:{add(){}}}};
 const window={innerHeight:1000,scrollY:0,addEventListener:(k,f)=>windowListeners[k]=f,matchMedia:()=>({matches:true})};
 const context=vm.createContext({document,window,Intl,Number,Math,Array,String,requestAnimationFrame:f=>f()});
 vm.runInContext(script,context,{timeout:1000});
@@ -87,5 +88,6 @@ window.scrollY=4500;
 windowListeners.scroll();
 assert.equal(progress.style.width,'50%');
 for(let i=0;i<5;i++){sceneButtons[i].listeners.click();assert.equal(sceneButtons.filter(b=>b.attrs['aria-pressed']==='true').length,1);assert.equal(elements.get('scene-number').textContent,String(i+1).padStart(2,'0'));assert.equal(elements.get('scene-screen').attrs['data-stage'],String(i+1));assert(fs.existsSync(path.join(root,elements.get('scene-image').attrs.src)));}
+for(let i=0;i<5;i++){studyButtons[i].listeners.click();assert.equal(studyButtons.filter(b=>b.attrs['aria-pressed']==='true').length,1);assert(elements.get('study-stage-copy').textContent.length>20);assert(fs.existsSync(path.join(root,elements.get('study-image').attrs.src)));}
 packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'true');assert(elements.get('package-objects').classes.has('expanded'));assert.equal(elements.get('package-foldout').hidden,false);packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'false');assert.equal(elements.get('package-foldout').hidden,true);
-console.log(JSON.stringify({result:'PASS',checks:['IDs / internal anchors / assets','responsive CSS declarations / brace balance','JavaScript initialization','5 track switches / keyboard navigation','budget arithmetic at 6 quantity settings','menu open / anchor close / Escape','reading progress','five MV scene states and image assets','package expansion and collapse'],budgets,browserRendering:'Static and DOM behavior checks only; live browser verification follows deployment'},null,2));
+console.log(JSON.stringify({result:'PASS',checks:['IDs / internal anchors / assets','responsive CSS declarations / brace balance','JavaScript initialization','5 track switches / keyboard navigation','budget arithmetic at 6 quantity settings','menu open / anchor close / Escape','reading progress','five MV scene states and image assets','five visual stages and image assets','package expansion and collapse'],budgets,browserRendering:'Static and DOM behavior checks only; live browser verification follows deployment'},null,2));

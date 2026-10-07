@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+  <title id="title">Six Lines / One Breath</title>
+  <desc id="desc">Six individual lines begin at different distances, bend through a shared field of warmth, and continue side by side without merging.</desc>
+  <defs>
+    <radialGradient id="warmth" cx="70%" cy="50%" r="52%">
+      <stop offset="0" stop-color="#d8764b" stop-opacity=".35"/>
+      <stop offset=".38" stop-color="#c65b39" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#c65b39" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8da9b5" stop-opacity=".48"/>
+      <stop offset=".43" stop-color="#d6e0dd" stop-opacity=".82"/>
+      <stop offset=".76" stop-color="#f0eee8"/>
+      <stop offset="1" stop-color="#f0eee8" stop-opacity=".9"/>
+    </linearGradient>
+    <pattern id="air" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".35" fill="#f0eee8" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="760" fill="#14262c"/>
+  <rect width="1000" height="760" fill="url(#air)"/>
+  <ellipse cx="700" cy="385" rx="356" ry="324" fill="url(#warmth)"/>
+  <g fill="none" stroke="#8da9b5" stroke-opacity=".17" stroke-width="1">
+    <path d="M84 48V712M316 48V712M558 48V712M800 48V712"/>
+    <path d="M45 154H955M45 380H955M45 606H955"/>
+  </g>
+  <g fill="none" stroke="url(#cold)" stroke-linecap="round">
+    <path stroke-width="3" d="M62 102C192 100 205 146 292 170S430 222 501 256C580 294 633 342 710 340S856 332 947 342"/>
+    <path stroke-width="4" d="M62 224C164 206 225 246 312 260S450 298 510 323C584 353 631 373 718 377S851 376 947 380"/>
+    <path stroke-width="3.5" d="M62 333C170 340 227 325 307 340S443 365 512 382C596 402 641 413 720 415S853 416 947 418"/>
+    <path stroke-width="4.5" d="M62 470C169 466 225 438 311 449S439 447 513 448C592 448 646 452 722 453S852 454 947 456"/>
+    <path stroke-width="3.25" d="M62 598C178 595 221 538 306 531S435 505 510 494C586 482 645 490 722 490S852 492 947 494"/>
+    <path stroke-width="4" d="M62 702C169 703 221 646 314 614S441 560 512 536C591 509 643 525 724 527S855 531 947 532"/>
+  </g>
+  <g fill="#f0eee8" opacity=".93">
+    <circle cx="62" cy="102" r="4"/><circle cx="62" cy="224" r="4"/><circle cx="62" cy="333" r="4"/>
+    <circle cx="62" cy="470" r="4"/><circle cx="62" cy="598" r="4"/><circle cx="62" cy="702" r="4"/>
+  </g>
+  <g fill="#f59a6c">
+    <circle cx="947" cy="342" r="5"/><circle cx="947" cy="380" r="5"/><circle cx="947" cy="418" r="5"/>
+    <circle cx="947" cy="456" r="5"/><circle cx="947" cy="494" r="5"/><circle cx="947" cy="532" r="5"/>
+  </g>
+  <path d="M45 48H155M845 712H955" fill="none" stroke="#f59a6c" stroke-width="2"/>
+</svg>

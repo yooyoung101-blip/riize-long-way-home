@@ -80,6 +80,24 @@ function selectScene(index){
  document.getElementById('scene-number').textContent=String(index+1).padStart(2,'0');
 }
 sceneButtons.forEach((button,index)=>button.addEventListener('click',()=>selectScene(index)));
+const studyStages=[
+ {image:'six-lines-stage-1.svg',label:'01 / 따로 선 거리',copy:'여섯 선이 먼 간격으로 출발하고 끝난다. 첫 곡의 건조한 솔로와 짧은 문답처럼 각자의 박자가 먼저 보인다.',alt:'여섯 선이 넓은 간격을 유지하는 첫 번째 단계의 그래픽'},
+ {image:'six-lines-stage-2.svg',label:'02 / 눈맞춤',copy:'선이 방향을 조금 바꿔 서로의 존재를 알아본다. 두 사람의 대답이 전원 후렴으로 열리는 타이틀의 변화를 따른다.',alt:'여섯 선이 조금 가까워지며 방향을 바꾸는 두 번째 단계의 그래픽'},
+ {image:'six-lines-stage-3.svg',label:'03 / 같은 박',copy:'굽이가 달라도 끝의 간격은 줄어든다. 어긋나는 리듬과 맞춰 걷는 동작을 함께 담는 구간이다.',alt:'각기 다른 굽이를 가진 여섯 선이 더 가까운 간격에 이르는 세 번째 단계의 그래픽'},
+ {image:'six-lines-stage-4.svg',label:'04 / 편한 침묵',copy:'선의 움직임이 잦아들고 서로 곁에 머문다. 악기를 덜어낸 자리에서 가까운 보컬과 화음이 들린다.',alt:'여섯 선이 조용하고 가까운 간격으로 이어지는 네 번째 단계의 그래픽'},
+ {image:'six-lines-one-breath.svg',label:'05 / 공유한 여백',copy:'각자의 선을 유지한 채 가까운 간격으로 나란히 이어진다. 관계 안에서 편안해진 마지막 상태다.',alt:'여섯 선이 각자의 형태를 유지하면서 나란히 이어지는 마지막 단계의 그래픽'}
+];
+const studyButtons=Array.from(document.querySelectorAll('[data-study-stage]'));
+function selectStudyStage(index){
+ const stage=studyStages[index];
+ const image=document.getElementById('study-image');
+ image.setAttribute('src','assets/'+stage.image);
+ image.setAttribute('alt',stage.alt);
+ document.getElementById('study-stage-label').textContent=stage.label;
+ document.getElementById('study-stage-copy').textContent=stage.copy;
+ studyButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+}
+studyButtons.forEach((button,index)=>button.addEventListener('click',()=>selectStudyStage(index)));
 const packageButton=document.querySelector('.package-toggle');
 packageButton.addEventListener('click',()=>{
  const expanded=packageButton.getAttribute('aria-expanded')!=='true';
