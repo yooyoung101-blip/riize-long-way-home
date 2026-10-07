@@ -18,18 +18,17 @@
 
 외부 플랫폼의 재생·지역 제한 및 링크 변경은 별도 확인이 필요합니다. 제안 곡의 데모로 사용하지 않습니다.
 
-## 사진 크레딧 / 2026-09-29 화면 개편
+## 사진 크레딧 / 2026-10-08 화면 개편
 
 사진 출처 재확인: 2026-10-06. 기사 링크·사진 캡션·멤버명 표기를 확인했다.
 
-기존 Love 119 활동 사진을 겨울 감각과 관계의 거리감을 위한 레퍼런스로 인용합니다. 신규 앨범 촬영물·MV 완성본이 아닙니다. 원본 파일을 보관하고 화면에서 CSS 크롭·색감·타이포그래피 오버레이를 적용했습니다. 인물 이미지 생성·합성은 하지 않았습니다.
+기존 Love 119 활동 사진을 겨울 감각과 관계의 거리감을 위한 레퍼런스로 인용합니다. 신규 앨범 촬영물·MV 완성본이 아닙니다. 원본 파일을 보관하고 화면에서 CSS 크롭·색감·타이포그래피 오버레이를 적용했습니다. 여섯 사진을 별도 프레임에 재배치했으며 인물 자체를 생성하거나 변형하지 않았습니다.
 
 | 로컬 파일 | 확인한 출처 | 사용 |
 |---|---|---|
-| `assets/winter-group.jpg` | [SM 제공 / 스포츠경향](https://sports.khan.co.kr/article/202401221538013) | 첫 화면·포토북 디지털 시안 |
 | `assets/snow-rest.jpg` | [Love 119 티저 / Soompi](https://www.soompi.com/article/1634508wpp/watch-riize-gears-up-for-new-single-love-119-with-mv-teaser) | 관계 이미지·엔딩 트랙·MV 레퍼런스·기록 카드 |
-| `assets/group-genie.jpg` | [지니뮤직 매거진 / Love 119](https://www.genie.co.kr/magazine/subMain?ctid=1&mgz_seq=13916) | 도시 그룹 사진·트랙·캠페인 시안 |
-| `assets/shotaro.jpg`, `eunseok.jpg`, `sungchan.jpg`, `wonbin.jpg`, `sohee.jpg`, `anton.jpg` | 같은 지니뮤직 매거진의 멤버명 표기 순서 | 보컬 배치 가설·감정·구도 레퍼런스 |
+| `assets/group-genie.jpg` | [지니뮤직 매거진 / Love 119](https://www.genie.co.kr/magazine/subMain?ctid=1&mgz_seq=13916) | 도시 그룹 사진·트랙·공동 프레임·접지 시안 |
+| `assets/shotaro.jpg`, `eunseok.jpg`, `sungchan.jpg`, `wonbin.jpg`, `sohee.jpg`, `anton.jpg` | 같은 지니뮤직 매거진의 멤버명 표기 순서 | 첫 화면·표지·티저 조합과 보컬·구도 레퍼런스 |
 
 사진: SM Entertainment 기존 프로모션 이미지. 원 사진가 이름·이용 조건은 별도로 확인하지 못했습니다. 현재 기획안에는 위 기존 활동 사진을 유지하고, 게재 매체와 사진가를 구분해 표기했습니다.
 

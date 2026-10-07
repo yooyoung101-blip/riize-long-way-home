@@ -55,6 +55,7 @@ for(let i=0;i<5;i++){
   tabs[i].listeners.click();
   assert.equal(elements.get('track-title').textContent,tracks[i].name);
   assert.equal(elements.get('track-panel').attrs['aria-labelledby'],'track-tab-'+i);
+  assert.equal(elements.get('track-art').attrs['data-stage'],String(i+1));
   assert.equal(tabs.filter(x=>x.attrs['aria-selected']==='true').length,1);
   assert.equal(tabs.filter(x=>x.tabIndex===0).length,1);
   for(const field of ['track-sonic','track-vocal','track-check']) assert(elements.get(field).textContent.length>10);
@@ -85,6 +86,6 @@ assert.equal(mobileMenu.hidden,true);
 window.scrollY=4500;
 windowListeners.scroll();
 assert.equal(progress.style.width,'50%');
-for(let i=0;i<5;i++){sceneButtons[i].listeners.click();assert.equal(sceneButtons.filter(b=>b.attrs['aria-pressed']==='true').length,1);assert.equal(elements.get('scene-number').textContent,String(i+1).padStart(2,'0'));assert(fs.existsSync(path.join(root,elements.get('scene-image').attrs.src)));}
-packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'true');assert(elements.get('package-objects').classes.has('expanded'));packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'false');
+for(let i=0;i<5;i++){sceneButtons[i].listeners.click();assert.equal(sceneButtons.filter(b=>b.attrs['aria-pressed']==='true').length,1);assert.equal(elements.get('scene-number').textContent,String(i+1).padStart(2,'0'));assert.equal(elements.get('scene-screen').attrs['data-stage'],String(i+1));assert(fs.existsSync(path.join(root,elements.get('scene-image').attrs.src)));}
+packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'true');assert(elements.get('package-objects').classes.has('expanded'));assert.equal(elements.get('package-foldout').hidden,false);packageButton.listeners.click();assert.equal(packageButton.attrs['aria-expanded'],'false');assert.equal(elements.get('package-foldout').hidden,true);
 console.log(JSON.stringify({result:'PASS',checks:['IDs / internal anchors / assets','responsive CSS declarations / brace balance','JavaScript initialization','5 track switches / keyboard navigation','budget arithmetic at 6 quantity settings','menu open / anchor close / Escape','reading progress','five MV scene states and image assets','package expansion and collapse'],budgets,browserRendering:'Static and DOM behavior checks only; live browser verification follows deployment'},null,2));

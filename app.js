@@ -23,6 +23,7 @@ function selectTrack(index, focus=false) {
   document.getElementById('track-panel').setAttribute('aria-labelledby','track-tab-'+index);
   document.querySelectorAll('.track-diagram span').forEach((dot,i)=>{dot.style.background=i===index?'var(--hot)':'var(--ink)';dot.style.borderColor=i===index?'var(--hot)':'#91a4bb';});
   const visual=trackVisuals[index];
+  document.getElementById('track-art').setAttribute('data-stage',String(index+1));
   const artImage=document.getElementById('track-image');
   artImage.setAttribute('src','assets/'+visual.image);
   artImage.setAttribute('alt',visual.alt);
@@ -72,6 +73,7 @@ const scenes=[
 const sceneButtons=Array.from(document.querySelectorAll('[data-scene]'));
 function selectScene(index){
  const scene=scenes[index];
+ document.getElementById('scene-screen').setAttribute('data-stage',String(index+1));
  sceneButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
  const img=document.getElementById('scene-image');img.setAttribute('src','assets/'+scene.image);img.setAttribute('alt',scene.alt);
  for(const key of ['time','word','stage','title','copy'])document.getElementById('scene-'+key).textContent=scene[key];
@@ -83,5 +85,6 @@ packageButton.addEventListener('click',()=>{
  const expanded=packageButton.getAttribute('aria-expanded')!=='true';
  packageButton.setAttribute('aria-expanded',String(expanded));
  document.getElementById('package-objects').classList.toggle('expanded',expanded);
+ document.getElementById('package-foldout').hidden=!expanded;
  packageButton.firstChild.textContent=expanded?'패키지 모아 보기 ':'패키지 펼쳐 보기 ';
 });
