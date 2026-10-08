@@ -76,6 +76,8 @@ for(let units=5000;units<=30000;units+=5000){
   assert.equal(actual,Math.round(expected));
   budgets.push({units,total:actual});
 }
+assert.equal(elements.get('units').attrs['aria-valuetext'],'30,000장');
+assert.match(elements.get('budget-status').textContent,/30,000장.*3억 9,600만원.*총사업비는 미산정/);
 menuButton.listeners.click();
 assert.equal(mobileMenu.hidden,false);
 assert.equal(menuButton.getAttribute('aria-expanded'),'true');

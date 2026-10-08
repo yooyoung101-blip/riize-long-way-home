@@ -55,7 +55,14 @@ const unitsInput=document.getElementById('units');
 const formatter=new Intl.NumberFormat('ko-KR');
 function wonLabel(amount){const eok=Math.floor(amount/100000000);const man=(amount%100000000)/10000;return(eok?eok+'억 ':'')+(man?formatter.format(man)+'만원':(eok?'원':'0원'));}
 function updateBudget(){const units=Number(unitsInput.value);const manufacture=units*6000;const subtotal=180000000+manufacture;const contingency=Math.round(subtotal*.1);const total=subtotal+contingency;document.getElementById('units-label').textContent=formatter.format(units)+'장';document.getElementById('budget-total').textContent=formatter.format(total);document.getElementById('manufacture-formula').textContent=formatter.format(units)+'장 × 6,000원';document.getElementById('manufacture-cost').textContent=wonLabel(manufacture);document.getElementById('contingency-cost').textContent=wonLabel(contingency);document.getElementById('budget-table-total').textContent=wonLabel(total);}
-unitsInput.addEventListener('input',updateBudget);updateBudget();
+unitsInput.addEventListener('input',()=>{updateBudget();updateBudgetAnnouncement();});updateBudget();
+function updateBudgetAnnouncement(){
+  const units=formatter.format(Number(unitsInput.value));
+  const total=Number(document.getElementById('budget-total').textContent.replace(/,/g,''));
+  unitsInput.setAttribute('aria-valuetext',units+'장');
+  document.getElementById('budget-status').textContent='초도 '+units+'장 기준, 포함 항목 제작비 예시 '+wonLabel(total)+'. 총사업비는 미산정.';
+}
+updateBudgetAnnouncement();
 let framePending=false;
 function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;document.querySelector('.reading-progress span').style.width=(max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0)+'%';framePending=false;}
 window.addEventListener('scroll',()=>{if(!framePending){framePending=true;requestAnimationFrame(updateProgress);}},{passive:true});
@@ -105,4 +112,12 @@ packageButton.addEventListener('click',()=>{
  document.getElementById('package-objects').classList.toggle('expanded',expanded);
  document.getElementById('package-foldout').hidden=!expanded;
  packageButton.firstChild.textContent=expanded?'패키지 모아 보기 ':'패키지 펼쳐 보기 ';
+});
+let printDetailStates=[];
+window.addEventListener('beforeprint',()=>{
+  printDetailStates=Array.from(document.querySelectorAll('details'),detail=>[detail,detail.open]);
+  printDetailStates.forEach(([detail])=>{detail.open=true;});
+});
+window.addEventListener('afterprint',()=>{
+  printDetailStates.forEach(([detail,wasOpen])=>{detail.open=wasOpen;});
 });
